@@ -13,7 +13,10 @@ import java.util.*;
 import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.GenerationType.SEQUENCE;
 
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class User {
     @Id
     @GeneratedValue(strategy = SEQUENCE)

@@ -12,6 +12,13 @@ import javax.validation.constraints.NotEmpty;
 import static javax.persistence.FetchType.LAZY;
 import static javax.persistence.GenerationType.SEQUENCE;
 
+
+@Data
+@Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class Post {
 
     //post id
@@ -24,7 +31,7 @@ public class Post {
     private String postName;
 
     @Nullable
-    private String link;
+    private String url;
 
     @Nullable
     @Lob
