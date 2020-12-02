@@ -10,7 +10,7 @@ import java.time.Instant;
 import java.util.List;
 
 import static javax.persistence.FetchType.LAZY;
-import static javax.persistence.GenerationType.SEQUENCE;
+import static javax.persistence.GenerationType.AUTO;
 
 @Data
 @AllArgsConstructor
@@ -19,14 +19,14 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Builder
 public class SubMoment {
     @Id
-    @GeneratedValue(strategy = SEQUENCE)
+    @GeneratedValue(strategy = AUTO)
     private Long id;
     @NotBlank(message = "You need to enter name")
     private String name;
     @NotBlank(message = "You need to enter introduction")
     private String intro;
     @OneToMany(fetch = LAZY)
-    private List<Post> posts;
+    private List<Moment> moments;
     private Instant createdTime;
     @ManyToOne(fetch = LAZY)
     private User user;

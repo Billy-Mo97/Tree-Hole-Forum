@@ -11,6 +11,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.util.*;
 import static javax.persistence.FetchType.LAZY;
+import static javax.persistence.GenerationType.AUTO;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 @Data
@@ -19,7 +20,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Entity
 public class User {
     @Id
-    @GeneratedValue(strategy = SEQUENCE)
+    @GeneratedValue(strategy = AUTO)
     private Long userId;
     @NotBlank(message = "Enter an Username")
     private String username;

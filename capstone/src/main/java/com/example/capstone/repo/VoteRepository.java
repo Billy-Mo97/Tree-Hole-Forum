@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.*;
 
 public interface VoteRepository extends JpaRepository<Vote, Long>{
-    Optional<Vote> findTopByPostAndUserOrderByVoteIdDesc (Post post, User user);
+    Optional<Vote> findTopByPostAndUserOrderByVoteIdDesc (Moment moment, User user);
 }
