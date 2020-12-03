@@ -1,37 +1,66 @@
 package com.capstone.forum.treeholeforum.model;
 
-import java.time.*;
-
-import lombok.*;
-
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
+import java.util.Date;
 
-import static javax.persistence.FetchType.LAZY;
-import static javax.persistence.GenerationType.AUTO;
-
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Data
 @Entity
+@Table
 public class Comment {
+
     @Id
-    @GeneratedValue(strategy = AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    //comment content is non-empty
-    @NotEmpty
-    private String contentText;
+    @Column
+    private String momentId;
 
-    //each moment's comment an ID and create time
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "postId", referencedColumnName = "postId")
-    private Moment moment;
-    private Instant createTime;
+    @Column
+    private String contents;
 
-    // get user of the comment
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
-    private User user;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getMomentId() {
+        return momentId;
+    }
+
+    public void setMomentId(String momentId) {
+        this.momentId = momentId;
+    }
+
+    public String getContents() {
+        return contents;
+    }
+
+    public void setContents(String contents) {
+        this.contents = contents;
+    }
+
+    public String getCreatedUser() {
+        return createdUser;
+    }
+
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
+    }
+
+    public Date getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    @Column
+    private String createdUser;
+
+    @Column
+    private Date createdTime;
+
 }
