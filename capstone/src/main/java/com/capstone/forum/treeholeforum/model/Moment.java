@@ -1,50 +1,68 @@
 package com.capstone.forum.treeholeforum.model;
 
-import java.time.*;
-
-import lombok.*;
-import org.springframework.lang.Nullable;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import java.util.Date;
+import java.util.List;
 
-import static javax.persistence.FetchType.LAZY;
-import static javax.persistence.GenerationType.AUTO;
-
-
-@Data
 @Entity
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-
+@Table
 public class Moment {
-
-    //moment id
     @Id
-    @GeneratedValue(strategy = AUTO)
-    private long postId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    //Moment Name
-    @NotBlank(message = "Moment Empty Name Error")
-    private String postName;
+    @Column
+    private String topic;
 
-    @Nullable
-    private String url;
+    public Long getId() {
+        return id;
+    }
 
-    @Nullable
-    @Lob
-    private String intro;
-    private int voteCounter;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getTopic() {
+        return topic;
+    }
 
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
-    private User user;
-    private Instant createdTime;
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
 
+    public String getContents() {
+        return contents;
+    }
 
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "id", referencedColumnName = "id")
-    private SubMoment subMoment;
+    public void setContents(String contents) {
+        this.contents = contents;
+    }
+
+    public String getCreatedUser() {
+        return createdUser;
+    }
+
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
+    }
+
+    public Date getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    @Column
+    private String contents;
+
+    @Column
+    private String createdUser;
+
+    //@CreatedDate
+    @Column
+    private Date createdTime;
 }
