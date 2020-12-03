@@ -2,7 +2,6 @@ package com.capstone.forum.treeholeforum.controller;
 
 
 import com.capstone.forum.treeholeforum.DTO.RegReqBody;
-import com.capstone.forum.treeholeforum.service.AuthEditService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
