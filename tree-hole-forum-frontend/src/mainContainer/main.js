@@ -20,7 +20,6 @@ class Main extends React.Component {
         if(!token) {
             alert("Please log in!")
             this.props.history.push({ pathname: "/login"});
-            //window.location.href = "/";
         }
     }
 
@@ -60,7 +59,6 @@ class Main extends React.Component {
                                 <Avatar icon={<UserOutlined />} />
                             </Dropdown>
                         </Space>
-                        //<p>username</p>,
                     ]}
                 />
                 <div>
