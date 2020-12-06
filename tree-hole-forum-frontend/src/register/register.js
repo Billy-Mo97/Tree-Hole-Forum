@@ -8,7 +8,6 @@ import {
     message
 } from 'antd';
 import './register.scss';
-import {UserOutlined} from "@ant-design/icons";
 
 export class Register extends React.Component {
     constructor(props) {
