@@ -1,5 +1,4 @@
 export function dateFormat(format, date) {
-    // format=>日期格式  date=>要格式化的时间
     let time = new Date();
     if (date) {
         if (typeof date === 'string') {
