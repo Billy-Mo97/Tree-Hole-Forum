@@ -1,9 +1,8 @@
 import React from 'react';
 import {Col, Row, Menu, Table, Button, Switch, message, Popconfirm, Alert} from 'antd';
-import {MailOutlined, AppstoreOutlined, SettingOutlined, UserOutlined, DeleteOutlined} from '@ant-design/icons';
+import {DeleteOutlined} from '@ant-design/icons';
 
 import './personalCenter.scss';
-import {Content, Footer, Header} from "antd/es/layout/layout";
 import './manageCenter.scss'
 import {dateFormat} from "../util/util";
 
