@@ -25,9 +25,6 @@ export class Forum extends React.Component {
                 return Date.parse(b.createdTime) - Date.parse(a.createdTime);
             });
             totalMoments = totalMoments.map(moment => {
-                //console.log(this.state.user.id);
-                //console.log(moment.votes);
-                //console.log(moment.votes.findIndex(vote => vote.userId == this.state.user.id));
                 return {
                     ...moment,
                     like: (moment.votes.findIndex(vote => vote.userId == this.state.user.id) !== -1)
@@ -71,7 +68,6 @@ export class Forum extends React.Component {
     }
 
     changeTopic = topic => {
-        //message.success("changeTopic");
         this.setState({
             currentTopic: topic
         })
