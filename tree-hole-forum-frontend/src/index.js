@@ -4,6 +4,7 @@ import './index.css';
 import {AppRouter} from './router';
 import './axios';
 
+//Define the main root of front-end
 ReactDOM.render(
   <React.StrictMode>
     <AppRouter />
