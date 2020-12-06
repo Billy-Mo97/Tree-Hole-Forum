@@ -17,9 +17,6 @@ import {
     message, Popconfirm
 } from 'antd';
 import {
-    MailOutlined,
-    AppstoreOutlined,
-    SettingOutlined,
     UserOutlined,
     DeleteOutlined,
     LikeOutlined
