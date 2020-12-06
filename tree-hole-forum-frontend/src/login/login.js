@@ -14,13 +14,10 @@ class Login extends React.Component {
         let token = localStorage.getItem("login_token");
         if(token) {
             this.props.history.push({ pathname: "/main"});
-            //window.location.href = "/main";
         }
     }
 
     handleSubmit = (values) => {
-        //console.log(values);
-        //console.log(this.props);
         this.$axios.post('/api/users/login', values).then((res) =>
         {
             if(res.password) {
