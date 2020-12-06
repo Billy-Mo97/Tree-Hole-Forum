@@ -11,6 +11,7 @@ import Main from "./mainContainer/main";
 
 import 'antd/dist/antd.css';
 
+//This class contains the definition of router
 export const AppRouter = () => (
     <Router>
         <div>
