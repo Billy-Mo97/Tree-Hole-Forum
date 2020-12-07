@@ -1,17 +1,11 @@
 package com.capstone.forum.treeholeforum.controller;
 
-
-import com.capstone.forum.treeholeforum.dao.LoginRequest;
 import com.capstone.forum.treeholeforum.dao.MomentDto;
 import com.capstone.forum.treeholeforum.model.Comment;
 import com.capstone.forum.treeholeforum.model.Moment;
-import com.capstone.forum.treeholeforum.model.User;
 import com.capstone.forum.treeholeforum.model.Vote;
 import com.capstone.forum.treeholeforum.repository.MomentRepository;
-import com.capstone.forum.treeholeforum.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
-
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import com.capstone.forum.treeholeforum.controller.CommentController;
