@@ -2,6 +2,7 @@ package com.capstone.forum.treeholeforum.model;
 
 import javax.persistence.*;
 
+//Definition for vote object
 @Entity
 @Table
 public class Vote {
