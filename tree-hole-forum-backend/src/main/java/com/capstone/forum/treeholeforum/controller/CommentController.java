@@ -1,19 +1,11 @@
 package com.capstone.forum.treeholeforum.controller;
 
-
-import com.capstone.forum.treeholeforum.dao.LoginRequest;
 import com.capstone.forum.treeholeforum.model.Comment;
-import com.capstone.forum.treeholeforum.model.Moment;
-import com.capstone.forum.treeholeforum.model.User;
 import com.capstone.forum.treeholeforum.repository.CommentRepository;
-import com.capstone.forum.treeholeforum.repository.MomentRepository;
-import com.capstone.forum.treeholeforum.repository.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/comment")
