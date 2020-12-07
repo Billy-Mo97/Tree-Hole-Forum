@@ -1,7 +1,6 @@
 package com.capstone.forum.treeholeforum.repository;
 
 import com.capstone.forum.treeholeforum.model.Comment;
-import com.capstone.forum.treeholeforum.model.Moment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
