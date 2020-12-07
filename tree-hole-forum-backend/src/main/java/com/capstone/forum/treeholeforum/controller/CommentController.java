@@ -16,18 +16,18 @@ public class CommentController {
         this.commentRepository = commentRepository;
     }
 
-    @GetMapping//查
+    @GetMapping
     public List<Comment> getList() {
         return commentRepository.findAll();
     }
 
-    @PostMapping//改和增
+    @PostMapping
     public Comment addComment(@RequestBody Comment comment) {
         comment.setCreatedTime(new Date());
         return commentRepository.save(comment);
     }
 
-    @DeleteMapping(value = "/{uid}")//删
+    @DeleteMapping(value = "/{uid}")
     public void delComment(@PathVariable("uid") Long uid
     ) {
         commentRepository.deleteById(uid);

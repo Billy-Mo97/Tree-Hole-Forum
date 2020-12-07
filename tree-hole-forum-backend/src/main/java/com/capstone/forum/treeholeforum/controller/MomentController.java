@@ -26,19 +26,19 @@ public class MomentController {
         this.voteController = voteController;
     }
 
-    @GetMapping//查
+    @GetMapping
     public List<MomentDto> getList() {
         List<Moment> moments = momentRepository.findAll();
         return attachMoment(moments);
     }
 
-    @PostMapping//改和增
+    @PostMapping
     public Moment addMoment(@RequestBody Moment moment) {
         moment.setCreatedTime(new Date());
         return momentRepository.save(moment);
     }
 
-    @DeleteMapping(value = "/{uid}")//删
+    @DeleteMapping(value = "/{uid}")
     public void delMoment(@PathVariable("uid") Long uid
     ) {
         momentRepository.deleteById(uid);

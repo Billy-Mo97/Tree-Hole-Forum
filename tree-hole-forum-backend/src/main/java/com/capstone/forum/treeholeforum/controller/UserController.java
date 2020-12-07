@@ -16,17 +16,17 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @GetMapping//查
+    @GetMapping
     public List<User> getList() {
         return userRepository.findAll();
     }
 
-    @PostMapping//改和增
+    @PostMapping
     public User addUser(@RequestBody User user) {
         return userRepository.save(user);
     }
 
-    @DeleteMapping(value = "/{uid}")//删
+    @DeleteMapping(value = "/{uid}")
     public void delUser(@PathVariable("uid") Long uid
     ) {
         userRepository.deleteById(uid);

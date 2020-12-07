@@ -1,12 +1,9 @@
 package com.capstone.forum.treeholeforum.controller;
 
-import com.capstone.forum.treeholeforum.model.Comment;
 import com.capstone.forum.treeholeforum.model.Vote;
-import com.capstone.forum.treeholeforum.repository.CommentRepository;
 import com.capstone.forum.treeholeforum.repository.VoteRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -18,17 +15,17 @@ public class VoteController {
         this.voteRepository = voteRepository;
     }
 
-    @GetMapping//查
+    @GetMapping
     public List<Vote> getList() {
         return voteRepository.findAll();
     }
 
-    @PostMapping//改和增
+    @PostMapping
     public Vote addVote(@RequestBody Vote vote) {
         return voteRepository.save(vote);
     }
 
-    @DeleteMapping(value = "/{uid}")//删
+    @DeleteMapping(value = "/{uid}")
     public void delVote(@PathVariable("uid") Long uid
     ) {
        voteRepository.deleteById(uid);
