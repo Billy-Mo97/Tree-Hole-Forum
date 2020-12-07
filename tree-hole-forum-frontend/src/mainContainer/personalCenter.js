@@ -214,7 +214,7 @@ export class PersonalCenter extends React.Component {
         );
 
         const Moment = ({moment, index}) => (
-            <div className="userInfo-moment-element">
+            <div className="moment-element">
                 <Layout>
                     <Header>
                         <div className="head-topic">
@@ -300,11 +300,16 @@ export class PersonalCenter extends React.Component {
                                 this.state.currentNav === "1" ? <PersonalInfo/> : this.state.currentNav === "2"
                                     ? <PasswordInfo/>
                                     :
-                                    (this.state.totalMoments.map((moment,index) => {
-                                        return (
-                                            <Moment moment={moment} index={index}/>
-                                        );
-                                    }))
+                                    <div className="userInfo-moment-element">
+                                        {
+                                            (this.state.totalMoments.map((moment,index) => {
+                                                return (
+
+                                                    <Moment moment={moment} index={index}/>
+                                                );
+                                            }))
+                                        }
+                                    </div>
                             }
                     </Col>
                 </Row>
