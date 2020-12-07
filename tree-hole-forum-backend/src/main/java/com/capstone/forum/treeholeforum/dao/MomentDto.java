@@ -7,6 +7,7 @@ import lombok.Data;
 import java.util.Date;
 import java.util.List;
 
+//Definition for Moment temp class
 @Data
 public class MomentDto {
 
